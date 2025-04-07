@@ -1,0 +1,33 @@
+EXASCREEN LOG FILE
+PHARMACELERA S.L.
+--------------------------------------------------------------
+
+Release: "59011243d"
+
+Configuration
+Input file: libraries/EnamineREAL_202409_v3.pha.gz
+Reference file: experiments/prod/experiment_demo2_1_vs_2E7ARUBR4_6_4_2025_23_1_41/inputs/Demo2_1_pa2ga_xtal.sdf
+Linux distribution: #1 SMP PREEMPT_DYNAMIC Tue Dec  3 21:07:35 UTC 2024
+Linux release: 6.1.119-129.201.amzn2023.x86_64
+OpenMP version: 201511
+Working directory: /usr/src/app
+Command line: exascreen --odir experiments/prod/experiment_demo2_1_vs_2E7ARUBR4_6_4_2025_23_1_41/outputs --input libraries/EnamineREAL_202409_v3.pha.gz --ref experiments/prod/experiment_demo2_1_vs_2E7ARUBR4_6_4_2025_23_1_41/inputs/Demo2_1_pa2ga_xtal.sdf --enum-nmols 1000 --working_dir . --name experiment_demo2_1_vs 
+Number of threads: 32
+Host name: ip-172-31-46-2.eu-west-1.compute.internal
+User: pharmacelera
+
+Partitioning reference molecule in bonds: 1-4
+--------------------------------------------------------------
+
+Screening library with reference molecule fragment 1
+--------------------------------------------------------------
+
+Screening library with reference molecule fragment 2
+--------------------------------------------------------------
+
+Enumerating molecules
+--------------------------------------------------------------
+
+
+Simulation ended successfully
+Execution time 10414.6 seconds

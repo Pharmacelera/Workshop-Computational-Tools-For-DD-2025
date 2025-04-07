@@ -1,0 +1,25 @@
+# PharmQSAR multiexperiment configuration file
+# Common configuration parameters for all experiments should be defined inside the static block
+
+static:
+  URI: "http://63.32.255.36"
+  PORT: "8080"
+  UPLOAD_S3: false
+  MODEL_NAME: "BEST_MODEL_JCIM"
+
+# Specific experiment parameters must be defined in the experiments block
+# As many experiments as experiment blocks will be launched. Each experiment
+# block will be named experiment#(number) and will include the specific configuration
+# of that experiment
+
+experiment1:
+  endpoint: "pharmqsar/launch"
+  name: "experiment_demo3_1_predict_jcim"
+  mode: "predict"
+  charges: userdefined
+  logp: userdefined
+  repcomp: "3"
+  files:
+    input: "inputs/Demo3_1_seh_prospective_study.sdf"
+    repcoef: "inputs/Demo3_1_seh_model.coef"
+    repgrid: "inputs/Demo3_1_seh_grid.pdb"

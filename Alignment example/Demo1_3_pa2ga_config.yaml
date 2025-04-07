@@ -1,0 +1,44 @@
+# PharmScreen multiexperiment configuration file
+# Common configuration parameters for all experiments should be defined inside the static block
+static:
+  URI: "http://63.32.255.36"
+  PORT: "8080"
+  UPLOAD_S3: false
+  MODEL_NAME: "Demo1_3_pa2ga"
+
+# Specific experiment parameters must be defined in the experiments block
+# As many experiments as experiment blocks will be launched. Each experiment
+# block will be named experiment#(number) and will include the specific configuration
+# of that experiment
+
+# Reference file preparation
+experiment1:
+  name: "experiment_demo1_3_ref_prep"
+  endpoint: "pharmscreen/launch"
+  charges: "gasteiger"
+  logp: "at"
+  ligprep: "true"
+  files:
+    input: Demo1_3_pa2ga_xtal.sdf
+    
+# Molecule library preparation
+experiment2:
+  name: "experiment_demo1_3_lib_prep"
+  endpoint: "pharmscreen/launch"
+  charges: "gasteiger"
+  logp: "at"  
+  ligprep: "true"
+  genconf: "true"
+  conf: 200
+  files:
+    input: Demo1_3_pa2ga_ligand.smi
+
+# Virtual screening
+experiment3:
+  name: "experiment_demo1_3_vs"
+  endpoint: "pharmscreen/launch"
+  charges: "userdefined"
+  logp: "userdefined"
+  files:
+    input: "tmp/experiment_demo1_3_lib_prep.sdf"
+    ref: "tmp/experiment_demo1_3_ref_prep.sdf"

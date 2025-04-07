@@ -1,0 +1,21 @@
+# exaScreen multiexperiment configuration file
+# Common configuration parameters for all experiments should be defined inside the static block
+static:
+  URI: "http://192.168.0.200"
+  PORT: "8080"
+  UPLOAD_S3: false
+  MODEL_NAME: "Demo2_1_EnamineREAL_vs"
+
+# Specific experiment parameters must be defined in the experiments block
+# As many experiments as experiment blocks will be launched. Each experiment
+# block will be named experiment#(number) and will include the specific configuration
+# of that experiment
+
+experiment1:
+  name: "experiment_demo2_1_vs"
+  endpoint: "exascreen/launch"
+  enumnmols: "1000"
+  manualpartition: "false"
+  input_lib: "EnamineREAL_202409_v3.pha.gz"
+  files:
+    ref: Demo2_1_pa2ga_xtal.sdf
